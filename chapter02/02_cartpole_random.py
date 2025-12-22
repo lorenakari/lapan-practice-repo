@@ -8,8 +8,7 @@ if __name__ == "__main__":
 
     while True:
         action = env.action_space.sample()
-        obs, reward, terminated, truncated, _ = env.step(action)
-        done = terminated or truncated
+        obs, reward, done, _ = env.step(action)
         total_reward += reward
         total_steps += 1
         if done:

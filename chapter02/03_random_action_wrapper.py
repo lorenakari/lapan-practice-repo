@@ -23,8 +23,7 @@ if __name__ == "__main__":
     total_reward = 0.0
 
     while True:
-        obs, reward, terminated, truncated, _ = env.step(0)
-        done = terminated or truncated
+        obs, reward, done, _ = env.step(0)
         total_reward += reward
         if done:
             break
